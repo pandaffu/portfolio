@@ -1,0 +1,1026 @@
+/* Map of Color Variables */
+$primary-color: #F0B11D;
+$secondary-color: #BD9B60;
+$tertiary-color: #11103B;
+$section-color: #FFEBBB;
+$p-gray: #707070;
+$p-white: #FFFFFF;
+$h1-color: #FFFFFF;
+$h2-color: #11103B;
+$menu-color: #FFFFFF;
+/* End of Colors */
+
+/* Text Sizes */
+
+$h1-size: 70px;
+$h2-size: 40px;
+$h3-size: 30px;
+$p-size: 16px;
+$p-description-size: 20px;
+
+/* End of Text Sizes */
+
+/* Font Families */
+
+@font-face {
+  font-family: Muli;
+  src: url(../fonts/Muli-Regular.woff);
+}
+@font-face {
+  font-family: Sitka;
+  src: url(../fonts/Sitka.ttc);
+}
+
+/* End of Font Families */
+
+/* Global Styling */
+html{
+  scroll-behavior: smooth;
+}
+#scroll-to-top{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  background: $secondary-color;
+  border: none;
+  border-radius:5px;
+  z-index: 999;
+  padding: 10px 13px;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition-duration: 1s;
+  .arrow-go-top{
+    color: #FFF;
+  }
+}
+#scroll-to-top:hover{
+  transform: translateY(-10px);
+}
+h1{
+  color: $h1-color;
+  font-size: $h1-size;
+  margin: 10px;
+  text-align: center;
+  font-family: 'DM Serif Text', serif;
+}
+
+h2{
+  color: $tertiary-color;
+  font-size: $h2-size;
+  font-family: 'DM Serif Text', serif;
+  margin: 10px 0 5px 0;
+}
+
+h3{
+  color: $tertiary-color;
+  font-size: $h3-size;
+  font-family: 'DM Serif Text', serif;
+  margin: 10px 0 5px 0;
+}
+
+p, li{
+  font-size: $p-size;
+  font-family: Muli, sans-serif;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.separator{
+  position: relative;
+  top: -35px;
+  left: -5px;
+  margin: 0;
+  width: 350px;
+  height: 30px;
+  z-index: -1;
+  background: #f1f1f1;
+  border: none;
+  padding: 0;
+}
+
+.logo {
+  height: 60px;
+  width: 150px;
+}
+
+.sub-paragraph{
+  position: relative;
+  margin-top: -20px;
+  text-align: justify;
+  line-height: 25px;
+}
+
+.btn{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  color: $secondary-color;
+  cursor: pointer;
+  margin: 50px auto;
+  font-weight: 800;
+  line-height: 45px;
+  max-width: 200px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Muli, sans-serif;
+  background: white;
+  font-size: 16px;
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: .6s;
+  transition-timing-function: ease;
+  letter-spacing: 1px;
+}
+
+.btn-1 {
+  font-weight: 100;
+
+  svg {
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  rect {
+    fill: none;
+    stroke: $secondary-color;
+    stroke-width: 4;
+    stroke-dasharray: 422, 0;
+    transition: all 0.35s linear;
+  }
+}
+
+.btn-1:hover {
+  background: rgba(red, 0);
+  font-weight: 900;
+  letter-spacing: 2px;
+  background: white;
+  rect {
+    stroke-width: 7;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+}
+
+
+/* End of Global Styling */
+
+/*********************************
+          MAIN PAGE
+*********************************/
+
+#menu{
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    .nav-link-container{
+      display: flex;
+      align-items: center;
+      li{
+        list-style-type: none;
+        .link{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $h2-color;
+          font-size: $p-size;
+          font-family: Muli, sans-serif;
+          padding: 5px 10px 5px 10px;
+          .fas{
+            padding: 0 5px;
+            font-size: 14px;
+          }
+        }
+        .link:hover, .link:active{
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .hamburger{
+    display: none;
+    .hamburger-icon{
+      font-size: 40px;
+      color: $tertiary-color;
+    }
+  }
+}
+#header{
+  height: 100vh;
+  clip-path: polygon(100% 0, 100% 90%, 55% 90%, 50% 100%, 45% 90%, 0 90%, 0 0);
+  .header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    height: 100%;
+  }
+  .video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    video{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .scroll-arrows{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -100px;
+    animation: animate 3s linear infinite;
+    z-index: 2323;
+    .arrows-link{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      .arrow1{
+        position: relative;
+        color: #FFF;
+        font-size: 40px;
+        top: 10px;
+      }
+      .arrow2{
+        position: relative;
+        font-size: 50px;
+        top: -10px;
+        color: #FFF;
+      }
+    }
+  }
+  @keyframes animate {
+    0%,100%{
+      transform: translateY(-10px);
+    }
+    50%{
+      transform: translateY(10px);
+    }
+  }
+}
+#about{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1370px;
+    margin: 50px;
+    .about-company{
+      max-width: 40%;
+      .h2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .read-more-icon{
+        cursor: pointer;
+        color: #F0B11D;
+        font-size: 12px;
+      }
+      .more-button {
+        border-style: none;
+        background: none;
+        font-family: Muli, sans-serif;
+        font-size: $p-size;
+        color: #F0B11D;
+        cursor: pointer;
+        padding: 0;
+        margin: 0 0 10px 0;
+      }
+      .expand {
+        transition: height .5s;
+        height: 0;
+        overflow: hidden;
+        color: $p-gray;
+        font-size: $p-size;
+        line-height: 25px;
+        font-family: Muli, sans-serif;
+        text-align: justify;
+        .link{
+          color: $secondary-color;
+        }
+      }
+    }
+    .about-picture{
+      position: relative;
+      left: 150px;
+      max-width: 55%;
+      .hotel-picture{
+        border-radius: 50px 50px 50px 50px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+#featured-holidays {
+  .featured-container{
+    .featured-offer-container{
+      max-width: 1370px;
+      margin: 0 auto;
+      padding: 25px 50px;
+    }
+    .featured-slider-container{
+      background: #FBF1D8;
+      .featured-slider{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 50px;
+        margin: 0 auto;
+        max-width: 1370px;
+        .featured-info-container{
+          .stars{
+            color: $secondary-color;
+          }
+          .special-offer{
+            text-transform: uppercase;
+            color: $secondary-color;
+            font-size: 25px;
+          }
+          li{
+            line-height: 30px;
+          }
+          .price{
+            color: $tertiary-color;
+            font-weight: 1000;
+            font-size: 20px;
+            display: inline;
+            margin: 0 20px 0 0;
+            .strong{
+              font-size: 35px;
+            }
+          }
+        }
+        .featured-img-container{
+          .featured-img{
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#our-destinations{
+  padding: 50px 50px 25px 50px;
+  .destinations-container{
+    max-width: 1370px;
+    margin: 0 auto;
+    }
+  }
+
+#map{
+  padding: 20% 20%;
+  display: block;
+  position: relative;
+  background-image: url("../images/world-continents.png") ;
+  background-position:center;
+  background-size: 80% auto;
+  background-repeat: no-repeat;
+}
+
+#map li {
+  /* pin's label */
+  display: block;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: $tertiary-color;
+  color: #FFF;
+  border-radius: 2rem;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 2.2rem;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transform: translateX(-1rem) translateY(-2.2rem);
+
+  transition: transform .5s ease-out,
+  background-color .25s ease-out;
+}
+
+#map li:after{
+  content:'';
+  display: block;
+  width: 0; height: 0;
+  margin-top:-.45rem;
+  margin-left:.35rem;
+  border-left: .65rem solid transparent;
+  border-right: .65rem solid transparent;
+  border-top: .65rem solid $tertiary-color;
+  transition: border-top .25s ease-out;
+}
+
+#map li:hover{
+  background-color: $secondary-color;
+  transform: translateX(-1rem) /* keep same settings */
+  translateY(-2.5rem); /* slightly higher setting */
+}
+
+#map li:hover:after{
+  border-top: .65rem solid $secondary-color;
+}
+
+
+/* ===== Media queries (mobile first) ===== */
+
+@media screen and (min-width: 720px){
+  html{
+    /* set smaller rem */
+    font-size: 16px;
+  }
+
+  section{
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media screen and (min-width: 1280px){
+  html{
+    /* set smaller rem */
+    font-size: 20px;
+  }
+
+  section{
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+#holiday-inspirations{
+  .holidays{
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 25px 50px;
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 10px;
+      text-align: center;
+      .beach-holidays {
+        grid-area: 1 / 1 / 2 / 3;
+        background: url("../images/holiday-inspirations/beach-holidays.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .all-inclusive {
+        grid-area: 1 / 3 / 2 / 4;
+        background: url("../images/holiday-inspirations/all-inclusive-luxury-holidays.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .luxury-safari {
+        grid-area: 1 / 4 / 2 / 5;
+        background: url("../images/holiday-inspirations/luxury-safari.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .luxury-spa {
+        grid-area: 2 / 1 / 3 / 2;
+        background: url("../images/holiday-inspirations/luxury-spa.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .private-island {
+        grid-area: 2 / 2 / 3 / 3;
+        background: url("../images/holiday-inspirations/private-island.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .luxury-cruise {
+        grid-area: 2 / 3 / 3 / 5;
+        background: url("../images/holiday-inspirations/luxury-cruise.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .luxury-villas {
+        grid-area: 3 / 1 / 4 / 3;
+        background: url("../images/holiday-inspirations/luxury-villas.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .rail-travel {
+        grid-area: 3 / 3 / 4 / 4;
+        background: url("../images/holiday-inspirations/rail-travel.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .private-estates-and-castles {
+        grid-area: 3 / 4 / 4 / 5;
+        background: url("../images/holiday-inspirations/private-estates-and-castles.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .luxury-ski {
+        grid-area: 4 / 1 / 5 / 2;
+        background: url("../images/holiday-inspirations/luxury-ski.jpg") center no-repeat;
+        background-size: cover;
+      }
+      .history-and-culture {
+        grid-area: 4 / 2 / 5 / 3;
+        background: url("../images/holiday-inspirations/history-and-culture.jpg" ) center no-repeat;
+        background-size: cover;
+      }
+      .honeymoon {
+        grid-area: 4 / 3 / 5 / 5;
+        background: url("../images/holiday-inspirations/honeymoon.jpg") center no-repeat;
+        background-size: cover;
+      }
+    }
+    .category {
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FFF;
+      position: relative;
+      z-index: 1;
+      font-family: Muli, sans-serif;
+      font-size: 25px;
+      cursor: pointer;
+      border-radius: 15px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      transition: all 0.3s ease;
+    }
+    .category:hover{
+      box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 5px 10px rgba(0,0,0,0.22);
+      transform: scale(1.01);
+      font-size: 26px;
+    }
+    .category::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .3;
+      z-index: -1;
+      background-color: black;
+      border-radius: 15px;
+    }
+  }
+}
+
+.footer-svg{
+  position: relative;
+  .svg{
+    position: relative;
+    top: 10px;
+    background: none;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+}
+#footer{
+  padding: 25px 0 50px 0;
+  background: $tertiary-color;
+  overflow-y: hidden;
+  position: relative;
+  width: 100vw;
+  .links-container{
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .footer-links{
+      justify-self: center;
+      .footer-h2{
+        color: #FFF;
+        font-size: 20px;
+      }
+      .separator{
+        top: -3px;
+        left: 2.5px;
+        border-top: 5px dashed $secondary-color;
+        background: none;
+        height: 0;
+        width: 100%;
+        z-index: 3;
+        max-width: 200px;
+      }
+      .footer-link{
+        display: block;
+        text-decoration: none;
+        color: #FFF;
+        font-family: Muli, sans-serif;
+        font-size: 17px;
+        margin: 5px 0;
+        transition: 0.5s ease;
+      }
+      .footer-link:hover{
+        transform: translateX(12px);
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+/* ===== Media queries global ===== */
+
+@media (max-width: 1000px) {
+  /* Typography */
+
+  p, li{
+    font-size: 1em;
+  }
+  .btn{
+    font-size: 0.8em;
+  }
+  h1{
+    font-size: 3.2em;
+  }
+  h2{
+    font-size: 1.7em;
+  }
+  h3{
+    font-size: 1.4em;
+  }
+  .separator{
+    max-width: 15em;
+  }
+  #footer > .links-container > .footer-links,
+  .footer-link{
+    font-size: 1em;
+  }
+  #featured-holidays > .featured-container > .featured-slider-container > .featured-slider > .featured-info-container > .price .strong{
+    font-size: 1.2em;
+  }
+
+  /* responsive menu */
+
+  #menu{
+    display: flex;
+    .menu-container{
+      display: none;
+      .nav-link-container{
+      }
+    }
+    .menu-container-active{
+      display: flex;
+    }
+    .nav-link-container{
+      flex-direction: column;
+      padding-left: 0;
+      width: 100%;
+    }
+    .hamburger{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .hamburger-logo{
+        margin: 0 25px;
+      }
+      .hamburger-container{
+        margin: 0 25px;
+        transition: 0.5s;
+        flex-direction: column-reverse;
+        .hamburger-icon{
+          padding: 6px 10px 4px 10px;
+          cursor: pointer;
+          transition: 0.5s;
+        }
+        .hamburger-icon-active{
+          transform: rotate(360deg);
+          color: #FFF;
+        }
+      }
+      .hamburger-container-active{
+        background: $tertiary-color;
+      }
+    }
+    .logo-container{
+      display: none;
+    }
+  }
+
+  /* responsive header */
+  #header{
+    clip-path: polygon(100% 0, 100% 90%, 60% 90%, 50% 100%, 40% 90%, 0 90%, 0 0);
+  }
+
+  /* responsive about section */
+  #about{
+    .about-container{
+      flex-direction: column;
+      .about-company{
+        max-width: 700px;
+      }
+      .about-picture{
+        left: 0;
+        max-width: 700px;
+        .hotel-picture{
+          padding: 25px 0;
+        }
+      }
+    }
+  }
+
+  /* featured holidays section */
+
+  #featured-holidays{
+    .featured-container{
+      .featured-slider-container{
+        .featured-slider{
+          flex-direction: column;
+          .featured-info-container{
+            width: 100%;
+          }
+          .featured-img-container{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* holiday inspirations section */
+
+  #holiday-inspirations{
+    .holidays{
+      .categories {
+        display: grid;
+        grid-template-areas: "beach inclusive"
+                             "safari spa"
+                             "island cruise"
+                             "villas rail"
+                             "castles ski"
+                             "history honeymoon";
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        text-align: center;
+        .category{
+          font-size: 1.2em;
+        }
+        .beach-holidays {
+          grid-area: beach;
+        }
+        .all-inclusive {
+          grid-area: inclusive;
+        }
+        .luxury-safari {
+          grid-area: safari;
+        }
+        .luxury-spa {
+          grid-area: spa;
+        }
+        .private-island {
+          grid-area: island;
+        }
+        .luxury-cruise {
+          grid-area: cruise;
+        }
+        .luxury-villas {
+          grid-area: villas;
+        }
+        .rail-travel {
+          grid-area: rail;
+        }
+        .private-estates-and-castles {
+          grid-area: castles;
+        }
+        .luxury-ski {
+          grid-area: ski;
+        }
+        .history-and-culture {
+          grid-area: history;
+        }
+        .honeymoon {
+          grid-area: honeymoon;
+        }
+      }
+    }
+  }
+
+  /* footer section */
+
+  #footer{
+    .links-container{
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 25px;
+      .footer-links{
+      }
+    }
+  }
+}
+
+/*********************************
+          HOLIDAYS PAGE
+*********************************/
+
+/* holiday offers section */
+
+#holiday-offers{
+  max-width: 1370px;
+  margin: 0 auto;
+  .holidays-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    padding: 50px 50px;
+    .holiday-container{
+      text-align: center;
+      .price{
+        color: $tertiary-color;
+        font-weight: 1000;
+        display: inline;
+        margin: 0 20px 0 0;
+        .strong{
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}
+
+/* ===== Media queries for Holidays Page ===== */
+
+@media (max-width: 1000px) {
+  #holiday-offers {
+    .holidays-container{
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  #holiday-offers {
+    .holidays-container{
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/*********************************
+           ADMIN PAGE
+*********************************/
+
+#admin-panel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FBF1D8;
+  padding: 50px;
+  .panel-container{
+    width: 900px;
+    background-color: #FFF;
+    margin: 80px 20px 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    .form-container{
+      padding: 50px 0 0;
+      height: 100%;
+      h1{
+        color: $tertiary-color;
+      }
+      p{
+        text-align: center;
+      }
+      #holiday-form{
+        .form-item{
+          display: flex;
+          flex-direction: column;
+          padding: 10px 50px;
+          max-width: 500px;
+          margin: 0 auto;
+          font-family: Muli;
+          font-size: 18px;
+          .input{
+            padding: 7px;
+            background: #f1f1f1;
+            border-radius: 5px;
+            border: none;
+          }
+          .input:focus{
+          border: none;
+          }
+          .text-label{
+            font-size: 18px;
+            padding: 0 0 5px;
+          }
+        }
+        .submit-button{
+          width: 100%;
+          height: 100%;
+          font-family: Muli;
+          text-transform: uppercase;
+          padding: 15px;
+          margin: 50px 0 0;
+          background: $tertiary-color;
+          color: #fff;
+          cursor: pointer;
+          border: none;
+          border-radius: 0 0 10px 10px;
+        }
+      }
+    }
+  }
+}
+
+/*********************************
+           SUCCESS PAGE
+*********************************/
+
+#success-container{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px 50px;
+  color: $p-gray;
+  font-family: Muli;
+  font-size: 18px;
+  .success-item{
+    padding: 5px;
+  }
+}
+
+/*********************************
+           CREDITS PAGE
+*********************************/
+
+#credits{
+  margin-top: 50px;
+  .credits-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 50px 0 50px;
+    .author-details{
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      .author-item{
+        margin: 5px 0;
+        .author-title{
+          color: $secondary-color;
+          font-weight: 1000;
+        }
+      }
+    }
+  }
+}
+
+#assets{
+  .assets-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+    .assets-details{
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      .assets-item{
+        margin: 5px 0;
+        .assets-title{
+          color: $secondary-color;
+          font-weight: 1000;
+        }
+        .assets-link{
+          color: $p-gray;
+        }
+      }
+    }
+  }
+}
+
+#security-considerations{
+  .security-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
