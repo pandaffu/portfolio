@@ -1,0 +1,307 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Leading Choice Getaways - Luxury Holidays</title>
+    <meta name="description" content="Leading Choice Getaways - Luxury Holidays">
+    <meta name="author" content="Kacper Adamski">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="menu">
+        <div class="menu-container">
+            <div class="logo-container">
+                <img class="logo" alt="logo" src="images/logo-leading-choice-getaways/logo.png">
+            </div>
+            <ul class="nav-link-container">
+                <li>
+                    <a class="link" href="index.html">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="holidays.php">
+                        Holidays
+                        <i class="fas fa-chevron-down "></i>
+                    </a>
+                </li>
+                <li><a class="link" href="admin.html">Admin</a></li>
+                <li><a class="link" href="credits.html">Credits</a></li>
+                <li><a class="link" href="wireframes/wireframes.pdf" target="_blank">Wireframes</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="hamburger-logo">
+                <img class="logo" alt="logo" src="images/logo-leading-choice-getaways/logo.png">
+            </div>
+            <div class="hamburger-container">
+                <i class="fas fa-bars hamburger-icon"></i>
+            </div>
+        </div>
+    </nav>
+    <button id="scroll-to-top" title="Go to Top">
+            <i class="fas fa-chevron-up arrow-go-top"></i>
+    </button>
+    <header id="header">
+        <div class="header-container">
+            <h1>Luxury Holidays</h1>
+        </div>
+        <div class="video-container">
+            <video playsinline autoplay muted loop poster="images/header-poster.png" class="header-video">
+                <source src="video/header.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="scroll-arrows">
+            <a href="#about" class="arrows-link">
+                <i class="fas fa-chevron-down arrow1"></i>
+                <i class="fas fa-chevron-down arrow2"></i>
+            </a>
+        </div>
+    </header>
+    <section id="about">
+        <div class="about-container">
+            <div class="about-company">
+                <div class="h2">
+                    <h2>Luxury Holidays by </h2>
+                    <img class="logo" src="images/logo-leading-choice-getaways/logo.png" alt="Luxury Holidays Logo">
+                </div>
+                <hr class="separator">
+                <p class="sub-paragraph">Here at Leading Choice Getaways we have a passion for luxury travel
+                    which began over ten years ago, here in the United Kingdom.
+                     We are experts at delivering the best holidays for our customers on the market, making it the
+                    safest and amazing choice for high quality holidays. Please have a look at what we have on our
+                    website. You will not regret! :)
+                    </p>
+                <div class="read-more" onclick="expandDiv()">
+                    <input type="button" value="Read more" class="more-button">
+                    <i class="fas fa-chevron-down read-more-icon" onclick="expandDiv()"></i>
+                </div>
+                <div class='expand'>
+                    <div class='measuringWrapper'>
+                        <div class="text">
+                            <p>Please <a class="link"
+                                                                                           href="holidays.php">click
+                                here</a> to get
+                                some more information about available holidays.
+                                <br>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-picture">
+                <img class="hotel-picture" src="images/maldives-hotel.jpg" alt="hotel in Maldives">
+            </div>
+        </div>
+    </section>
+    <section id="featured-holidays">
+        <div class="featured-container">
+            <div class="featured-offer-container">
+                <h2>Our Featured Holiday Offers</h2>
+                <hr class="separator">
+                <p class="sub-paragraph">A selection of our very best luxury holiday offers, chosen by our team</p>
+            </div>
+            <div class="featured-slider-container">
+                <div class="featured-slider">
+                    <div class="featured-info-container">
+                        <h3><span class="stars">★★★★</span> Sunshine Hotel, Maldives</h3>
+                        <p class="featured-location">North Male Atoll, Maldives
+                        <h2 class="special-offer">Special Offer</h2>
+                        <p>Stay 7 nights in a Double Deluxe room on all inclusive and receive:</p>
+                        <ul>
+                            <li>30% rate reduction on the price.</li>
+                            <li>Complimentary private luxury boat transfers.</li>
+                            <li>An extra All Inclusive on alcohol.</li>
+                        </ul>
+                        <p class="price">From <span class="strong">&#163;3,955</span></p>
+                        <p class="price">Saving <span class="strong">&#163;1,186</span></p>
+                        <a href="index.html" class="btn btn-1">
+                            <svg>
+                                <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                            </svg>
+                            View Property
+                        </a>
+                    </div>
+                    <div class="featured-img-container">
+                        <img class="featured-img" src="images/hotel-maldives.png" alt="Hotel in Maldives">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="our-destinations">
+        <div class="destinations-container">
+            <div class="h2">
+                <h2 class="h2">Our Destinations Around The World</h2>
+                <hr class="separator">
+                <p class="sub-paragraph">We offer holidays to six different continents around the globe, offering you
+                the biggest variety of all kinds of holidays.</p>
+            </div>
+            <ul id="map">
+                <li title="North America"
+                    style="top: 35%; left: 23%;">
+                    NA
+                </li>
+                <li title="South America"
+                    style="top: 63%; left: 28%;">
+                    SA
+                </li>
+                <li title="Europe"
+                    style="top: 36%; left: 53%;">
+                    EU
+                </li>
+                <li title="Africa"
+                    style="top: 60%; left: 56%;">
+                    AF
+                </li>
+                <li title="Australia"
+                    style="top: 78%; left: 81%;">
+                    AU
+                </li>
+                <li title="Indian Ocean"
+                    style="top: 76%; left: 69%;">
+                    IO
+                </li>
+            </ul>
+            <a href="holidays.php" class="btn btn-1">
+                <svg>
+                    <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                </svg>
+                All Destinations
+            </a>
+        </div>
+    </section>
+    <section id="holiday-inspirations">
+        <div class="holidays">
+            <div class="h2">
+                <h2 class="h2">Luxury Holiday Inspirations</h2>
+                <hr class="separator">
+                <p class="sub-paragraph">We've collected all the holidays and sorted them by category to make it easier for you to find what fits your needs.</p>
+            </div>
+            <div class="categories">
+                <div class="beach-holidays category">Beach Holidays</div>
+                <div class="all-inclusive category">All Inclusive</div>
+                <div class="luxury-safari category">Luxury Safari</div>
+                <div class="luxury-spa category">Luxury Spa</div>
+                <div class="private-island category">Private Island</div>
+                <div class="luxury-cruise category">Luxury Cruise</div>
+                <div class="luxury-villas category">Luxury Villlas</div>
+                <div class="rail-travel category">Rail Travel</div>
+                <div class="private-estates-and-castles category">Private Estates & Castles</div>
+                <div class="luxury-ski category">Luxury Ski</div>
+                <div class="history-and-culture category">History & Culture</div>
+                <div class="honeymoon category">Honeymoon</div>
+            </div>
+            <a href="holidays.php" class="btn btn-1">
+                <svg>
+                    <rect x="0" y="0" fill="none" width="100%" height="100%"/>
+                </svg>
+                View All Holidays
+            </a>
+        </div>
+    </section>
+    <div class="footer-svg">
+        <img class="svg" src="icons/separator.svg" alt="section separator">
+    </div>
+    <footer id="footer">
+        <div class="links-container">
+            <div class="footer-links">
+                <h2 class="footer-h2">Useful Information</h2>
+                <hr class="separator">
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    About Us
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Contact
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Sales offices
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Terms of cooperation
+                </a>
+            </div>
+            <div class="footer-links">
+                <h2 class="footer-h2">How To Reserve?</h2>
+                <hr class="separator">
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    About Us
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Contact
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Sales offices
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Terms of cooperation
+                </a>
+            </div>
+            <div class="footer-links">
+                <h2 class="footer-h2">Recommendations</h2>
+                <hr class="separator">
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    About Us
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Contact
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Sales offices
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Terms of cooperation
+                </a>
+            </div>
+            <div class="footer-links">
+                <h2 class="footer-h2">Social Media</h2>
+                <hr class="separator">
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    About Us
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Contact
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Sales offices
+                </a>
+                <a class="footer-link" href="index.html">
+                    <i class="fas fa-chevron-right"></i>
+                    Terms of cooperation
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="scripts/collapsable-text.js"></script>
+    <script src="https://kit.fontawesome.com/2d5172904e.js" crossorigin="anonymous"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/scroll-to-top.js"></script>
+</body>
+</html>

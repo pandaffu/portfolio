@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Leading Choice Getaways - Luxury Holidays</title>
+    <meta name="description" content="Leading Choice Getaways - Luxury Holidays">
+    <meta name="author" content="Kacper Adamski">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav id="menu">
+        <div class="menu-container">
+            <div class="logo-container">
+                <img class="logo" alt="logo" src="images/logo-leading-choice-getaways/logo.png">
+            </div>
+            <ul class="nav-link-container">
+                <li>
+                    <a class="link" href="index.html">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a class="link" href="holidays.php">
+                        Holidays
+                        <i class="fas fa-chevron-down "></i>
+                    </a>
+                </li>
+                <li><a class="link" href="admin.html">Admin</a></li>
+                <li><a class="link" href="credits.html">Credits</a></li>
+                <li><a class="link" href="wireframes/wireframes.pdf" target="_blank">Wireframes</a></li>
+            </ul>
+        </div>
+        <div class="hamburger">
+            <div class="hamburger-logo">
+                <img class="logo" alt="logo" src="images/logo-leading-choice-getaways/logo.png">
+            </div>
+            <div class="hamburger-container">
+                <i class="fas fa-bars hamburger-icon"></i>
+            </div>
+        </div>
+    </nav>
+    <section id="admin-panel">
+        <div class="panel-container">
+            <div class="form-container">
+                <h1>Add holidays</h1>
+                <p>To add a new holiday, please fill out all the required fields below:</p>
+                <form id="holiday-form" method="post" action="add-holiday.php">
+                    <label class="form-item">
+                        <span class="text-label">Title</span>
+                        <input class="input" type="text" name="holidayTitle" required>
+                    </label>
+                    <label class="form-item">
+                        <span class="text-label">Description</span>
+                        <input class="input" type="text" name="holidayDesc" required>
+                    </label>
+                    <label class="form-item">
+                        <span class="text-label">Duration - (number of days)</span>
+                        <input class="input" type="number" name="holidayDuration" placeholder="1-14" max="14"
+                               required>
+                    </label>
+                    <label class="form-item">
+                        <span class="text-label">Price</span>
+                        <input class="input" type="text" name="holidayPrice" required>
+                    </label>
+                    <label class="form-item">
+                        <span class="text-label">Category</span>
+                        <select class="input" name="holidayCatID">
+                            <option value="c1" class="text-label">Luxury</option>
+                            <option value="c2" class="text-label">Tour</option>
+                            <option value="c3" class="text-label">Safari</option>
+                            <option value="c4" class="text-label">Golf</option>
+                            <option value="c5" class="text-label">Weddings</option>
+                            <option value="c6" class="text-label">Walking</option>
+                            <option value="c7" class="text-label">Opera</option>
+                        </select>
+                    </label>
+                    <label class="form-item">
+                        <span class="text-label">Location</span>
+                        <select class="input" name="holidayLocationID">
+                            <option value="l1" class="text-label">Milaidhoo Island</option>
+                            <option value="l2" class="text-label">Rangali Island</option>
+                            <option value="l3" class="text-label">Zanzibar</option>
+                            <option value="l4" class="text-label">Boston</option>
+                            <option value="l5" class="text-label">San Francisco</option>
+                            <option value="l6" class="text-label">Nairobi</option>
+                            <option value="l7" class="text-label">Algarve</option>
+                            <option value="l8" class="text-label">New York</option>
+                            <option value="l9" class="text-label">Sorrento</option>
+                            <option value="l10" class="text-label">Verona</option>
+                        </select>
+                    </label>
+                    <input type="submit" class="submit-button" value="send">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://kit.fontawesome.com/2d5172904e.js" crossorigin="anonymous"></script>
+    <script src="scripts/menu.js"></script>
+</body>
+</html>
